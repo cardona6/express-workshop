@@ -40,6 +40,10 @@ app.post('/create-post', function (req, res) {
     //     res.send(200);
     // });
 });
+app.get('/get-posts', function (req, res) {
+    const filePath = __dirname + '/data/posts.json';
+    res.sendfile(filePath);
+});
 
 
 app.listen(3000, function () {
